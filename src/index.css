@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: rgb(61, 60, 60);
+  background-color: rgb(176, 255, 255);
+  font-size: 20px;
+}
+
+h1 {
+  margin-top: 15px;
+  z-index: 100;
+}
+
+h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.header {
+  background-color: rgb(176, 255, 255);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  /* align-items:center; */
+}
+
+.logoHeader {
+  position: absolute;
+  width: 100vw;
+  bottom: 0%;
+  z-index: 0;
+}
+
+.menu {
+  position: fixed;
+  margin-top: 75px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgb(24, 110, 24);
+}
+
+.menuScrolled {
+  margin-top: 0px;
+  border-radius: 0px;
+  width: 100vw;
+  background-color: rgb(4, 35, 0);
+}
+
+.menuLink {
+  margin-left: 15px;
+  color: rgb(236, 236, 236);
+  text-decoration: none;
+}
+
+.mainWindow {
+  height: 100vh;
+  background-color: rgb(0, 178, 104);
+  width: 100vw;;
+}
+
+.mainWindow > div {
+  padding-top: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.window {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  height: 75vh;
+}
