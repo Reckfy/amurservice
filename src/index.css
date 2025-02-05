@@ -7,7 +7,7 @@
 body {
   font-family: sans-serif;
   color: rgb(61, 60, 60);
-  background-color: rgb(176, 255, 255);
+  background-color: rgb(0, 178, 104);
   font-size: 20px;
 }
 
@@ -18,6 +18,7 @@ h1 {
 
 h2 {
   font-size: 25px;
+  margin-left: 6px;
   margin-bottom: 15px;
 }
 
@@ -45,8 +46,18 @@ h2 {
   justify-content: center;
   z-index: 100;
   padding: 15px;
+  padding-left: 0;
   border-radius: 15px;
   background-color: rgb(24, 110, 24);
+}
+
+.menuLink {
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.menuLink:hover {
+  background-color: rgb(11, 138, 15);
 }
 
 .menuScrolled {
@@ -69,14 +80,15 @@ h2 {
 }
 
 .mainWindow > div {
-  padding-top: 70px;
+  padding-top: 80px;
   padding-left: 100px;
   padding-right: 100px;
+  padding-bottom: 20px;
 }
 
 .window {
   border-radius: 10px;
   padding: 20px;
   background-color: white;
-  height: 75vh;
+  min-height: 85vh;
 }
