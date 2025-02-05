@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
   font-family: sans-serif;
   color: rgb(61, 60, 60);
-  background-color: rgb(0, 178, 104);
+  background-color: rgb(75, 207, 170);
   font-size: 20px;
 }
 
@@ -27,8 +28,6 @@ h2 {
   height: 100vh;
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
-  /* align-items:center; */
 }
 
 .logoHeader {
@@ -75,7 +74,6 @@ h2 {
 
 .mainWindow {
   height: 100vh;
-  background-color: rgb(0, 178, 104);
   width: 100vw;;
 }
 
@@ -91,4 +89,42 @@ h2 {
   padding: 20px;
   background-color: white;
   min-height: 85vh;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  position: relative; 
+  padding-left: 20px;
+}
+
+li::before {
+  content: "•";
+  position: absolute; 
+  left: 0; 
+  top:-0.2em;
+  color: #00cc29; 
+  font-size: 1.5em; 
+}
+
+.board {
+  border: 2px solid rgb(85, 233, 142);
+  border-radius: 12px;
+  background-color: rgb(223, 255, 240);
+  padding: 15px;
+  margin: 8px;
+  width:fit-content;
+}
+
+.board p {
+  margin-bottom: 3px;
+}
+
+.board a {
+  color: rgb(2, 136, 53);
+  margin-bottom: 3px;
 }

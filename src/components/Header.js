@@ -26,7 +26,7 @@ function Header(props) {
 
     return(
         <div className='header'>
-            <h1 className={'name'}>ООО "Амурсервис"</h1>
+            <h1 className={'name'}>ООО «Амурсервис»</h1>
             <div className={`menu ${scrolled ? 'menuScrolled' : ''}`}>
                 <Link to="/news" className='menuLink' onClick={scrollDown}>Новости</Link>
                 <Link to="/" className='menuLink' onClick={scrollDown}>Главная</Link>
