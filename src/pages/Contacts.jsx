@@ -1,7 +1,10 @@
+import './Contacts.scss'
+
 function Contacts(){
     return(
         <div>
             <div className="window">
+                <img alt='' src='./img/imageContacts.jpg'></img>
                 <h2>Контакты</h2>
                 <div className="board">
                     <p>ГРАФИК РАБОТЫ: c 8.00 до 17.00</p>

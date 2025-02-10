@@ -1,6 +1,6 @@
 import news from '../json/news.json';
 import React from 'react';
-import './NewsCard.css'
+import './NewsCard.scss'
 
 function NewsCard(params) {
 

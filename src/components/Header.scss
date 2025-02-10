@@ -1,0 +1,50 @@
+
+.header {
+    background-color: rgb(249, 249, 249);
+    width: 100vw;
+  }
+  
+.upHeader {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(132, 190, 132);
+  >div{
+    display: flex;
+    align-items: center;
+  }
+  img {
+    margin-right: 10px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    bottom: 0%;
+    z-index: 0;
+  }
+  p {
+    font-size: 12px;
+  }
+  a {
+    margin-top: -20px;
+  }
+}
+  
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+    z-index: 100;
+    padding: 10px 30px 20px 30px;
+  }
+  
+  
+  .menuLink {
+    text-decoration: none;
+    color: rgb(65, 65, 65);
+  }
+
+  .menuLink:hover {
+    color: rgb(69, 113, 70);
+  }
+

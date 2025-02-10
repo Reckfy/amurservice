@@ -1,0 +1,26 @@
+.window {
+    >img {
+        width: 100vw;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.board {
+    border: 2px solid rgb(85, 233, 142);
+    border-radius: 12px;
+    background-color: rgb(223, 255, 240);
+    padding: 15px;
+    margin: 8px;
+    width:fit-content;
+    display: none;
+  }
+  
+  .board p {
+    margin-bottom: 3px;
+  }
+  
+  .board a {
+    color: rgb(2, 136, 53);
+    margin-bottom: 3px;
+  }
