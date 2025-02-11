@@ -1,26 +1,105 @@
-.window {
-    >img {
+
+
+.title {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    img {
         width: 100vw;
-        position: absolute;
+        position: relative;
         z-index: -1;
+    }
+    h2 {
+        position: absolute;
+        top: calc(50% - (90px / 2)); 
+        left: calc(50% - ((90px * (12/5))  )); 
+        color: white;
+        font-size: 90px;
+        transform: none;
+        
     }
 }
 
-.board {
-    border: 2px solid rgb(85, 233, 142);
-    border-radius: 12px;
-    background-color: rgb(223, 255, 240);
-    padding: 15px;
-    margin: 8px;
-    width:fit-content;
-    display: none;
-  }
-  
-  .board p {
-    margin-bottom: 3px;
-  }
-  
-  .board a {
-    color: rgb(2, 136, 53);
-    margin-bottom: 3px;
-  }
+.submenuContacts {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    button {
+        padding: 30px;
+        border-bottom: 1px solid white;
+    }
+    .activeButton{
+        color: green;
+        font-weight: 600;
+        border-bottom: 2px solid green;
+    }
+}
+
+.address {
+    min-width: 90vh;
+    padding: 60px;
+    justify-content: space-between;
+    b {
+        display: block;
+        margin-top: 10px;
+    }
+    .infoAddress{
+        margin-top: 100px;
+    }
+    p {
+        margin-top: 10px;
+    }
+}
+
+.worktime{
+    padding: 60px;
+    display: flex;
+    p {
+        padding: 30px;
+    }
+}
+
+.social {
+    min-height: 40vh;
+    padding: 60px;
+}
+
+.details {
+    padding: 130px;
+    .detailsTitle {
+        font-size: 50px;
+        margin-left: 0;
+        margin-bottom: 100px;
+        color: rgb(43, 108, 11);
+        padding-right: 60px;
+        padding-bottom: 30px;
+        border-bottom: 4px solid rgb(43, 108, 11);
+        max-width: 800px;
+        b {
+            display: block;
+        }
+    }
+    div {
+        margin-top: 30px;
+        margin-left: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid rgb(221, 221, 221);
+        max-width: 700px;
+    }
+}
+
+.indicators {
+    padding: 80px;
+    b {
+        margin-bottom: 40px;
+        display: block;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    img {
+        width: 30px;
+    }
+}

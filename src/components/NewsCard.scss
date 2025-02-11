@@ -1,7 +1,28 @@
 .newsCard{
-    background-color: rgb(239, 239, 239);
-    border-radius: 13px;
-    margin: 8px;
+    // background-color: rgb(239, 239, 239);
+    margin: 20px;
     padding: 8px;
-    font-size: 14px;
+    width: 316px;
+    transition: transform 0.5s ease-in-out;
+    img {
+        width: 300px;
+        height: 300px;
+        position: relative; 
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin: 10px;
+    }
+}
+.newsCard:hover {
+    transform: scale(1.01) translateY(-3px);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
 }

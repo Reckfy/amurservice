@@ -1,5 +1,5 @@
-import news from '../json/news.json';
-import React from 'react';
+import news from '../json/news.json'
+import React from 'react'
 import './NewsCard.scss'
 
 function NewsCard(params) {
@@ -13,12 +13,25 @@ function NewsCard(params) {
         ));
       };
 
+    const outputType = (type) => {
+      if (type == 1) {
+        return "Отчет";
+      } else {
+        return "Новость";
+      }
+    }
+
     return (
-        <div>
+        <div className='cards'>
           {news.map((item, index) => (
             <div className='newsCard' key={index}>
-              <h3>{item.date} {item.title}</h3>
-              <p>{formatText(item.text)}</p>
+              <img alt='' src={item.image}></img>
+              <p>{item.title}</p>
+              <div>
+                <p>{item.date}</p>
+                <p>{outputType(item.type)}</p>
+              </div>
+              {/* <p>{formatText(item.text + ' ...')}</p> */}
             </div>
           ))}
         </div>

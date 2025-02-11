@@ -1,9 +1,9 @@
 import Header from './components/Header'
-import { Routes, Route } from 'react-router-dom';
-import Main from './pages/MainW';
-import News from './pages/News';
-import Contacts from './pages/Contacts';
-import Houses from './pages/Houses';
+import { Routes, Route } from 'react-router-dom'
+import Main from './pages/MainW'
+import News from './pages/News'
+import Contacts from './pages/Contacts'
+import Houses from './pages/Houses'
 
 function App() {
     return (
