@@ -23,7 +23,7 @@ function Main(){
                             Наша компания постоянно стремится делать свою работу более эффективной, а связь с жителями еще оперативнее. Мы открыты для диалога и благодарны за обратную связь
                             </p>
                         </div>
-                        <img alt='' src='./img/imageAbout.jpg'></img>
+                        <img alt='' src='./img/imageAbout.jpeg'></img>
                     </div>
                     <div className="targets">
                         <h2>Цели:</h2>

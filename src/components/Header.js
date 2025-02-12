@@ -9,7 +9,7 @@ function Header(props) {
         <div className='header'>
             <div className='upHeader'>
                 <div>
-                    <img alt='Логотип' src='./img/city.png'></img>
+                    <img alt='Логотип' src='./img/logo.svg'></img>
                     <div>
                         <h1>АМУРСЕРВИС</h1>
                         <p>УПРАВЛЯЮЩАЯ</p>
