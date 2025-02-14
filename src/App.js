@@ -16,6 +16,7 @@ function App() {
     const [contracts, setContracts] = useState([]);
     const [protocols, setProtocols] = useState([]);
     const [documents, setDocuments] = useState([]);
+    const [reports, setReports] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
@@ -25,11 +26,13 @@ function App() {
                 const newsResponse = await axios.get('/news');
                 const protocolsResponse = await axios.get('/protocols');
                 const documentsResponse = await axios.get('/documents');
+                const reportsResponse = await axios.get('/reports');
                 setTableHouses(housesResponse.data);
                 setContracts(contractsResponse.data);
                 setDataNews(newsResponse.data);
                 setProtocols(protocolsResponse.data);
                 setDocuments(documentsResponse.data);
+                setReports(reportsResponse.data);
             } catch (error) {
                 console.error('Ошибка при загрузке данных:', error);
             }
@@ -46,7 +49,7 @@ function App() {
                     <Route path="/news" element={<News dataNews={dataNews}/>} />
                     <Route path="/contacts" element={<Contacts />} />
                     <Route path="/houses" element={<Houses tableHouses = {tableHouses}/>} />
-                    <Route path="/news/:newsId" element={<DetailNews dataNews = {dataNews}/>} />
+                    <Route path="/news/:newsId" element={<DetailNews dataNews = {dataNews} reports = {reports}/>} />
                     <Route path="/houses/:housesId" element={<DetailHouses tableHouses = {tableHouses} contracts = {contracts} protocols = {protocols} documents = {documents}/>} />
                 </Routes>
             </div>

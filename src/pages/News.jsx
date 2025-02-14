@@ -7,8 +7,8 @@ function News({dataNews}){
 
     const [activeTab, setActiveTab] = useState('all');
 
-    const outputType = (type) => {
-      if (type === true) {
+    const outputType = (report) => {
+      if (report === true) {
         return "Отчет";
       } else {
         return "Новость";
@@ -33,14 +33,14 @@ function News({dataNews}){
                 <div>
                     <div style={{ display: activeTab === 'all' ? 'block' : 'none' }}>
                         <div className='cards'>
-                            {dataNews.map((item, index) => (
+                            {dataNews.map((item) => (
                                 <Link to={`/news/${item.id}`}>
-                                    <div className='newsCard' key={index}>
+                                    <div className='newsCard' key={item.id}>
                                         <img alt='' src={item.image}></img>
                                         <p>{item.title}</p>
                                         <div>
                                             <p>{item.date}</p>
-                                            <p>{outputType(item.type)}</p>
+                                            <p>{outputType(item.report)}</p>
                                         </div>
                                     </div>
                                 </Link>

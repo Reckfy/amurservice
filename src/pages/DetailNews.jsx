@@ -2,13 +2,17 @@ import React from "react"
 import { useParams } from 'react-router-dom'
 import './DetailNews.scss'
 
-function DetailNews({dataNews}) {
+function DetailNews({dataNews, reports}) {
     const params = useParams();
     const id = parseInt(params.newsId);
 
     const currentNews = dataNews.find(item => item.id === id);
     if (!currentNews) return null;
 
+    const reports_id = currentNews.report_id;
+    const currentReports = reports.filter(item => item.report_id === reports_id);
+    if (!currentReports) return null;
+    
     const formatText = (text) => {
         return text.split('\\n').map((item, index) => (
           <React.Fragment key={index}>
@@ -26,7 +30,18 @@ function DetailNews({dataNews}) {
                 <b>{currentNews.title}</b>               
                 <img alt='' src={'.' + currentNews.image}/>
                 <p>{formatText(currentNews.txt)}</p>
-            </div>    
+            </div>  
+
+            {currentNews.report && (
+                currentReports.map((report) => {
+                    return(
+                    <div key={report.id} className="cardReport">
+                        <img alt='' src={'.' + report.image} />
+                        <p>{report.txt}</p>
+                    </div>
+                    )
+                })
+            )}  
         </div>
     );
 }
