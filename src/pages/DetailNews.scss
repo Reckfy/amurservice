@@ -1,0 +1,23 @@
+.detailNews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+        img {
+            border-radius: 10px;
+            width: 100%;
+            margin: auto;
+        }
+        b {
+            display: block;
+            margin-bottom: 30px;
+        }
+        p {
+            margin: 30px;
+        }
+    }
+}

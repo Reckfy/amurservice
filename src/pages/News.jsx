@@ -1,33 +1,23 @@
 import { useState } from 'react'
 import './News.scss'
-import news from '../json/news.json'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function News(){
+function News({dataNews}){
 
     const [activeTab, setActiveTab] = useState('all');
 
-    const formatText = (text) => {
-        return text.split('\n').map((item, index) => (
-          <React.Fragment key={index}>
-            {item}
-            <br />
-          </React.Fragment>
-        ));
-      };
-
     const outputType = (type) => {
-      if (type === 1) {
+      if (type === true) {
         return "Отчет";
       } else {
         return "Новость";
       }
     }
 
-    const reportNews = news.filter(item => item.type === 1);
-    const newsNews = news.filter(item => item.type === 0);
-
+    const reportNews = dataNews.filter(item => item.report === true);
+    const newsNews = dataNews.filter(item => item.report === false);
+    console.log(dataNews)
     return(
         <div>
             <div className='title'>
@@ -41,45 +31,51 @@ function News(){
                     <button onClick={() => setActiveTab('news')} className={activeTab === 'news' ? 'activeButton' : ''}>Новости</button>
                 </div>
                 <div>
-                    <div className='all' style={{ display: activeTab === 'all' ? 'block' : 'none' }}>
+                    <div style={{ display: activeTab === 'all' ? 'block' : 'none' }}>
                         <div className='cards'>
-                            {news.map((item, index) => (
-                                <div className='newsCard' key={index}>
-                                <img alt='' src={item.image}></img>
-                                <p>{item.title}</p>
-                                <div>
-                                    <p>{item.date}</p>
-                                    <p>{outputType(item.type)}</p>
-                                </div>
-                                </div>
+                            {dataNews.map((item, index) => (
+                                <Link to={`/news/${item.id}`}>
+                                    <div className='newsCard' key={index}>
+                                        <img alt='' src={item.image}></img>
+                                        <p>{item.title}</p>
+                                        <div>
+                                            <p>{item.date}</p>
+                                            <p>{outputType(item.type)}</p>
+                                        </div>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
-                    <div className='reports' style={{ display: activeTab === 'reports' ? 'block' : 'none' }}>
+                    <div style={{ display: activeTab === 'reports' ? 'block' : 'none' }}>
                         <div className='cards'>
                             {reportNews.map((item, index) => (
-                                <div className='newsCard' key={index}>
-                                <img alt='' src={item.image}></img>
-                                <p>{item.title}</p>
-                                <div>
-                                    <p>{item.date}</p>
-                                    <p>{outputType(item.type)}</p>
-                                </div>
-                                </div>
+                                <Link to={`/news/${item.id}`}>
+                                    <div className='newsCard' key={index}>
+                                        <img alt='' src={item.image}></img>
+                                        <p>{item.title}</p>
+                                        <div>
+                                            <p>{item.date}</p>
+                                            <p>{outputType(item.type)}</p>
+                                        </div>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
-                    <div className='news' style={{ display: activeTab === 'news' ? 'block' : 'none' }}>
+                    <div style={{ display: activeTab === 'news' ? 'block' : 'none' }}>
                         <div className='cards'>
                             {newsNews.map((item, index) => (
-                                <div className='newsCard' key={index}>
-                                <img alt='' src={item.image}></img>
-                                <p>{item.title}</p>
-                                <div>
-                                    <p>{item.date}</p>
-                                    <p>{outputType(item.type)}</p>
-                                </div>
-                                </div>
+                                <Link to={`/news/${item.id}`}>
+                                    <div className='newsCard' key={index}>
+                                        <img alt='' src={item.image}></img>
+                                        <p>{item.title}</p>
+                                        <div>
+                                            <p>{item.date}</p>
+                                            <p>{outputType(item.type)}</p>
+                                        </div>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
