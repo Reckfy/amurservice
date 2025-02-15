@@ -17,14 +17,28 @@
             margin-bottom: 30px;
         }
         p {
-            margin: 30px;
+            margin: 4vw;
         }
     }
-}
 
-.cardReport {
-    img {
-        width: 200px;
+    .reports {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .cardReport {
+            margin: 10px;
+            width: 600px;
+            img {
+                
+            }
+            p {
+                margin: 0 10px;
+            }
+        }
     }
     
 }
+

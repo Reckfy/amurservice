@@ -8,7 +8,7 @@ function Contacts(){
     return(
         <div>
             <div className="window">
-                <div className='title'>
+                <div className='titleContacts'>
                     <img alt='' src='./img/imageContacts.jpg'></img>
                     <h2>Контакты</h2>
                 </div>
@@ -35,7 +35,7 @@ function Contacts(){
                         <p>Понасийская Ирина Константиновна</p>
                     </div>
                     <div>
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A07ac5c396474ab1de776e60f81ba40ba949c3654b6553edc36946859f19f6a0e&amp;source=constructor" width="800" height="800" frameborder="0"></iframe>
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A07ac5c396474ab1de776e60f81ba40ba949c3654b6553edc36946859f19f6a0e&amp;source=constructor" frameborder="0"></iframe>
                     </div>
                 </div>
                 <div className='worktime' style={{ display: activeTab === 'worktime' ? 'flex' : 'none' }}>
@@ -52,8 +52,8 @@ function Contacts(){
                 </div>
                 <div className='details' style={{ display: activeTab === 'details' ? 'block' : 'none' }}>
                     <div className='detailsTitle'>
-                        <b>Управляющая компания</b>
-                        <b>«Амурсервис»</b>
+                        <b className='greenTitle'>Управляющая компания</b>
+                        <b className='greenTitle'>«Амурсервис»</b>
                     </div>
                     <div>
                         <p>Юридический адрес: 357350 Ставропольский край,</p>

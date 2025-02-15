@@ -7,6 +7,7 @@
 .upHeader {
     padding: 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgb(132, 190, 132);
@@ -14,30 +15,112 @@
     display: flex;
     align-items: center;
   }
-  img {
-    margin-right: 10px;
-    position: relative;
-    width: 100px;
-    height: 100px;
-    bottom: 0%;
-    z-index: 0;
-  }
   p {
     font-size: 12px;
   }
-  a {
-    margin-top: -15px;
-    margin-right: 20px;
-    font-size: 25px;
-  }
 }
-  
+ 
+
+
+.logo {
+  margin-right: 10px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  bottom: 0%;
+  z-index: 0;
+}
+
   .menu {
     position: relative;
     display: flex;
     justify-content:space-between;
     z-index: 100;
     padding: 20px 30px 40px 30px;
+    a {
+      margin-right: 20px;
+      font-size: 25px;
+    }
+  }
+
+.mobileMenuButton {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+  @media (max-width: 768px) {
+    .menu {
+      padding: 10px 10px 20px 20px;
+      a {
+        font-size: 16px;
+      }
+      
+    }
+    .logo {
+      width: 90px;
+      height: 90px;
+    }
+    .number {
+      position: absolute;
+      right: 5px;
+      top: 65px;
+      font-size: 18px;
+    }
+    
+  }
+
+  @media (max-width: 480px) {
+    .menu {
+      display: none;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+    .number {
+      font-size: 12px;
+    }
+    .header {
+      font-size: 12px;
+      position: sticky;
+      top: 0;
+    }
+    .mobileMenuButton {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: block;
+      img {
+        width: 35px;
+      }
+    }
+    
+    .mobileMenuClose {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: block;
+      img {
+        width: 30px;
+      }
+    }
+    .mobileMenu {
+      width: 100vw;
+      background-color: white;
+      display: block;
+      top: 0;
+      position: fixed;
+      z-index: 10000;
+      padding: 100px 50px;
+      a {
+        display: block;
+        margin: 10px;
+        font-size: 20px;
+      }
+    }
   }
   
   

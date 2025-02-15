@@ -1,10 +1,9 @@
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,10 +12,10 @@
 
 button {
   padding: 0;
-  border: none; 
-  font: inherit; 
-  color: inherit; 
-  background-color: transparent; 
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
   outline: none;
   box-sizing: border-box;
   cursor: pointer;
@@ -33,10 +32,11 @@ a:hover {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: rgb(66, 66, 66);
   background-color: rgb(249, 249, 249);
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -46,40 +46,54 @@ h2 {
 }
 
 .mainWindow {
-  width: 100vw;;
+  width: 100vw;
 }
-
 
 table {
   margin-top: 20px;
   margin-bottom: 60px;
   max-width: 1100px;
+  font-size: inherit;
   thead {
-      background-color: rgb(226, 255, 195);
+    background-color: rgb(226, 255, 195);
+    font-weight: 200;
   }
   th {
-      border: 2px solid rgb(180, 180, 180);
-      padding: 10px;
+    border: 2px solid rgb(180, 180, 180);
+    padding: 1vw;
   }
   td {
-      padding: 5px 10px;
-      border: 1px solid rgb(180, 180, 180);
+    padding: 1vw;
+    border: 1px solid rgb(180, 180, 180);
   }
   a {
-      margin: 2px;
+    margin: 2px;
   }
 
   tbody {
-      tr {
-          transition: background-color 0.3s ease-in-out;
-      }
-      tr:hover {
-          background-color: rgb(242, 231, 217);
-      }
-      th {
-          font-weight: 300;
-      }
+    tr {
+      transition: background-color 0.3s ease-in-out;
+    }
+    tr:hover {
+      background-color: rgb(242, 231, 217);
+    }
+    th {
+      font-weight: 300;
+    }
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
 
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  table {
+    font-size: 10px;
+  }
+}

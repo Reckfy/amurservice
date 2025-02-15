@@ -9,6 +9,7 @@
     position: relative;
     width: 100vw;
     height: auto;
+    z-index: -3;
     img {
         width: 100vw;
         position: relative;
@@ -16,10 +17,10 @@
     }
     h2 {
         position: absolute;
-        top: calc(50% - (90px / 2)); 
-        left: calc(50% - ((90px * (12/4))  )); 
+        top: calc(50% - (6vw / 2)); 
+        left: calc(50% - ((6vw * (10/3))  )); 
         color: white;
-        font-size: 90px;
+        font-size: 6vw;
         transform: none;
         
     }

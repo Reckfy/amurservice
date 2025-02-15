@@ -39,7 +39,7 @@ h2 {
     
     
     >div {
-        padding: 60px;
+        padding: 5vw;
         padding-right: 0px;
         display: flex;
         justify-content: space-between;
@@ -52,9 +52,9 @@ h2 {
         margin-top: 40px;
     }
     img {
-        margin-left: 100px;
+        display: block;
         position: relative;
-        width: 800px;
+        width: 40%;
         object-fit: cover;
     }
     .targets {
@@ -68,20 +68,25 @@ h2 {
 }
 
 .docs {
-    padding: 60px;
+    padding: 4vw;
     padding-bottom: 0px;
     min-height: 90vh;
+    flex-wrap: wrap-reverse;
+    
     img {
         margin-left: 0px;
+        display: block;
         position: relative;
-        height: 700px;
-        width: 600px;
+        //height: 700px;
+        width: 500px;
         object-fit: cover;
         margin-left: -60px;
     }
     >div {
-        margin-left: 50px;
+        width: 430px;
+        margin-left: 4vw;
         margin-top: 50px;
+        padding-bottom: 20px;
     }
     .titleDocs {
         margin-bottom: 50px;
@@ -105,14 +110,52 @@ ul {
     margin-top: 15px;
     padding-left: 20px;
     a {
-        color: rgb(174, 156, 133);;
+        color: rgb(174, 156, 133);
+        font-size: inherit;
     }
   }
   
   li::before {
     content: "•";
-    position: absolute; 
+    position: absolute;
+    font-size: 40px;
     left: 0; 
-    top:-0.2em;
+    top:-0.4em;
     color: rgb(174, 156, 133);
   }
+
+  @media (max-width: 768px) {
+    h2 {
+        font-size: 35px;
+    }
+  }
+
+@media (max-width: 480px) {
+    .submenu {
+        button {
+            padding: 20px 10px;
+        }
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .about {
+        >div {
+            padding-right: 3vw;
+        }
+        .info {
+            width: 100%;
+            margin-top: 50px;
+        }
+        img {
+            display: none;
+        }
+    }
+    .docs {
+        img {
+            display: none;
+        }
+    }
+}

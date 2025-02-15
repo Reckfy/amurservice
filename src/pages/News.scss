@@ -4,7 +4,7 @@
 }
 
 .submenuNews {
-    margin-left: 60px;
+    margin-left: 3vw;
     margin-top: 30px;
     display: flex;
     align-items: center;
@@ -29,8 +29,8 @@
 
 .newsCard{
     cursor: pointer;
-    margin: 20px;
-    padding: 8px;
+    margin: 1vw;
+    padding: 2vw;
     width: 416px;
     transition: transform 0.5s ease-in-out;
     max-height: 410px;
@@ -38,9 +38,10 @@
     flex-direction: column;
     justify-content: space-between;
     img {
-        width: 400px;
+        max-width: 400px;
         height: 300px;
         position: relative; 
+        z-index: -3;
         object-fit: cover;
         border-radius: 10px;
         margin-bottom: 10px;
@@ -51,6 +52,7 @@
         font-size: 14px;
         width: 100%;
         margin-top: 10px;
+        padding: 5px;
     }
 }
 .newsCard:hover {
@@ -61,4 +63,32 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 1vw;
+}
+
+.titleNews {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    z-index: -3;
+    img {
+        width: 100vw;
+        position: relative;
+        z-index: -1;
+    }
+    h2 {
+        position: absolute;
+        top: calc(50% - (6vw / 2)); 
+        left: calc(50% - ((6vw * (8/3))  )); 
+        color: white;
+        font-size: 6vw;
+        transform: none;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .newsCard {
+        width: 350px;
+    }
 }

@@ -1,33 +1,18 @@
-
-
-.title {
-    position: relative;
-    width: 100vw;
-    height: auto;
-    img {
-        width: 100vw;
-        position: relative;
-        z-index: -1;
-    }
-    h2 {
-        position: absolute;
-        top: calc(50% - (90px / 2)); 
-        left: calc(50% - ((90px * (12/5))  )); 
-        color: white;
-        font-size: 90px;
-        transform: none;
-        
-    }
+iframe {
+    width: 700px;
+    height: 700px;
+    margin-top: 10px;
 }
 
 .submenuContacts {
     margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     
     button {
-        padding: 30px;
+        padding: 3vw;
         border-bottom: 1px solid white;
     }
     .activeButton{
@@ -38,23 +23,29 @@
 }
 
 .address {
-    min-width: 90vh;
-    padding: 60px;
+    font-size: inherit;
+    min-width: 100vw;
+    padding: 4vw;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
     b {
         display: block;
         margin-top: 10px;
-    }
-    .infoAddress{
-        margin-top: 100px;
     }
     p {
         margin-top: 10px;
     }
 }
 
+.infoAddress{
+    margin-top: 50px;
+    margin-right: 1vw;
+    max-width: 600px;
+}
+
 .worktime{
-    padding: 60px;
+    padding: 4vw;
     display: flex;
     p {
         padding: 30px;
@@ -63,15 +54,14 @@
 
 .social {
     min-height: 40vh;
-    padding: 60px;
+    padding: 4vw;
 }
 
 .details {
-    padding: 130px;
+    padding: 4vw;
     .detailsTitle {
-        font-size: 50px;
         margin-left: 0;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
         color: rgb(43, 108, 11);
         padding-right: 60px;
         padding-bottom: 30px;
@@ -83,15 +73,20 @@
     }
     div {
         margin-top: 30px;
-        margin-left: 30px;
+        margin: 3vw;
         padding-bottom: 30px;
         border-bottom: 2px solid rgb(221, 221, 221);
         max-width: 700px;
     }
 }
 
+.greenTitle {
+    display: block;
+    font-size: 50px;
+}
+
 .indicators {
-    padding: 80px;
+    padding: 5vw;
     b {
         margin-bottom: 40px;
         display: block;
@@ -101,5 +96,52 @@
     }
     img {
         width: 30px;
+    }
+}
+
+.titleContacts {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    z-index: -3;
+    img {
+        width: 100vw;
+        position: relative;
+        z-index: -1;
+    }
+    h2 {
+        position: absolute;
+        top: calc(50% - (6vw / 2)); 
+        left: calc(50% - ((6vw * (9/3)))); 
+        color: white;
+        font-size: 6vw;
+        transform: none;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    iframe {
+        width: 460px;
+        height: 460px;
+    }
+    .infoAddress{
+        max-width: 470px;
+    }
+    .greenTitle {
+        font-size: 30px;
+    }
+  }
+  
+@media (max-width: 480px) {
+    iframe {
+        width: 340px;
+        height: 350px;
+    }
+    .infoAddress{
+        max-width: 350px;
+    }
+    .detailsTitle {
+        font-size: 20px;
     }
 }

@@ -32,16 +32,19 @@ function DetailNews({dataNews, reports}) {
                 <p>{formatText(currentNews.txt)}</p>
             </div>  
 
-            {currentNews.report && (
-                currentReports.map((report) => {
-                    return(
-                    <div key={report.id} className="cardReport">
-                        <img alt='' src={'.' + report.image} />
-                        <p>{report.txt}</p>
-                    </div>
-                    )
-                })
-            )}  
+            <div className="reports">
+                {currentNews.report && (
+                    currentReports.map((report) => {
+                        return(
+                        <div key={report.id} className="cardReport">
+                            <img alt='' src={'.' + report.image} />
+                            <p>{report.txt}</p>
+                        </div>
+                        )
+                    })
+                )}  
+            </div>
+            
         </div>
     );
 }

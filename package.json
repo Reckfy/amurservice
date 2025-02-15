@@ -35,5 +35,11 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://193.200.74.213:5000/"
+  "proxy": "http://193.200.74.213:5000/",
+  "devDependencies": {
+    "prettier": "^3.5.1"
+  },
+  "editor.codeActionsOnSave": {
+  "source.fixAll.stylelint": true
+}
 }

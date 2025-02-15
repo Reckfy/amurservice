@@ -17,10 +17,10 @@ function News({dataNews}){
 
     const reportNews = dataNews.filter(item => item.report === true);
     const newsNews = dataNews.filter(item => item.report === false);
-    console.log(dataNews)
+
     return(
         <div>
-            <div className='title'>
+            <div className='titleNews'>
                 <img alt='' src='./img/imageNews.jpg'></img>
                 <h2>Новости</h2>
             </div>
