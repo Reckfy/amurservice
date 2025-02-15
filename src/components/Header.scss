@@ -36,7 +36,7 @@
     display: flex;
     justify-content:space-between;
     z-index: 100;
-    padding: 20px 30px 40px 30px;
+    padding: 20px 60px 40px 60px;
     a {
       margin-right: 20px;
       font-size: 25px;
@@ -53,7 +53,7 @@
 
   @media (max-width: 768px) {
     .menu {
-      padding: 10px 10px 20px 20px;
+      padding: 10px 50px 20px 50px;
       a {
         font-size: 16px;
       }
@@ -114,7 +114,7 @@
       top: 0;
       position: fixed;
       z-index: 10000;
-      padding: 100px 50px;
+      padding: 50px 50px;
       a {
         display: block;
         margin: 10px;
