@@ -18,6 +18,9 @@
   p {
     font-size: 12px;
   }
+  a {
+    margin-right: 30px;
+  }
 }
  
 
@@ -65,7 +68,7 @@
     }
     .number {
       position: absolute;
-      right: 5px;
+      right: 0;
       top: 65px;
       font-size: 18px;
     }

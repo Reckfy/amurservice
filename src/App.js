@@ -21,12 +21,12 @@ function App() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const housesResponse = await axios.get('/houses');
-                const contractsResponse = await axios.get('/contracts');
-                const newsResponse = await axios.get('/news');
-                const protocolsResponse = await axios.get('/protocols');
-                const documentsResponse = await axios.get('/documents');
-                const reportsResponse = await axios.get('/reports');
+                const housesResponse = await axios.get('/api/houses');
+                const contractsResponse = await axios.get('/api/contracts');
+                const newsResponse = await axios.get('/api/news');
+                const protocolsResponse = await axios.get('/api/protocols');
+                const documentsResponse = await axios.get('/api/documents');
+                const reportsResponse = await axios.get('/api/reports');
                 setTableHouses(housesResponse.data);
                 setContracts(contractsResponse.data);
                 setDataNews(newsResponse.data);
