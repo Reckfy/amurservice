@@ -1,7 +1,9 @@
 import './Houses.scss'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Houses({tableHouses}){
+
+    const navigate = useNavigate();
 
     return(
         <div>
@@ -21,12 +23,12 @@ function Houses({tableHouses}){
                     </thead>
                     <tbody>
                     {tableHouses.map((house) => (
-                        <tr key={house.id}>
-                            <td><Link to={`/houses/${house.id}`}>{house.address}</Link></td>
-                            <td>{house.date}</td>
-                            <td>{house.area}</td>
-                            <td>{house.tariff}</td>
-                        </tr>
+                            <tr style={{cursor: 'pointer'}} key={house.id} onClick={() => navigate(`/houses/${house.id}`)}>
+                                <td>{house.address}</td>
+                                <td>{house.date}</td>
+                                <td>{house.area}</td>
+                                <td>{house.tariff}</td>
+                            </tr>
                         ))}
                     </tbody>
                 </table>
