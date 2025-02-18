@@ -1,7 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './DetailHouses.scss'
 
 function DetailHouses({tableHouses, contracts, protocols, documents}) {
+
+    const navigate = useNavigate();
 
     const params = useParams();
     const id = parseInt(params.housesId);
@@ -20,6 +22,7 @@ function DetailHouses({tableHouses, contracts, protocols, documents}) {
     
     return(
         <div className='detailHouse'>
+            <button className='backButton' onClick={() => navigate('/houses')}><img alt='' src='../img/left.png' /></button>
             <h2>Информация по дому:</h2>
             <div className='infoHouse'>
                 <div>
@@ -38,7 +41,7 @@ function DetailHouses({tableHouses, contracts, protocols, documents}) {
             <h3>Документация по дому:</h3>
             {currentContracts.map((contract) => {
                 return(
-                    <div className='contracts' key={contract.house_id}><p>{contract.txt}</p><a className='linkPdf' href={contract.link}>Скачать<img alt='' src='../img/pdfIcon.png'/></a></div>
+                    <div className='contracts' key={contract.house_id}><p>{contract.txt}</p><a className='linkPdf' href={contract.link} target="_blank" rel="noreferrer">Скачать<img alt='' src='../img/pdfIcon.png'/></a></div>
                 )
             })}
             <b>Протоколы общего собрания:</b>
@@ -55,10 +58,10 @@ function DetailHouses({tableHouses, contracts, protocols, documents}) {
                     {currentProtocols.map((protocol) => {
                         return(
                             <tr key={protocol.id}>
-                                <th>{protocol.name}</th>
-                                <th>{protocol.number}</th>
-                                <th>{protocol.date}</th>
-                                <th><a className='linkPdf' href={protocol.link}>Скачать<img alt='' src='../img/pdfIcon.png'/></a></th>
+                                <td>{protocol.name}</td>
+                                <td>{protocol.number}</td>
+                                <td>{protocol.date}</td>
+                                <td><a className='linkPdf' href={protocol.link} target="_blank" rel="noreferrer">Скачать<img alt='' src='../img/pdfIcon.png'/></a></td>
                             </tr>
                         )
                     })}
@@ -78,10 +81,10 @@ function DetailHouses({tableHouses, contracts, protocols, documents}) {
                     {currentDocuments.map((document) => {
                         return(
                             <tr key={document.id}>
-                                <th>{document.name}</th>
-                                <th>{document.number}</th>
-                                <th>{document.date}</th>
-                                <th><a className='linkPdf' href={document.link}>Скачать<img alt='' src='../img/pdfIcon.png'/></a></th>
+                                <td>{document.name}</td>
+                                <td>{document.number}</td>
+                                <td>{document.date}</td>
+                                <td><a className='linkPdf' href={document.link} target="_blank" rel="noreferrer">Скачать<img alt='' src='../img/pdfIcon.png'/></a></td>
                             </tr>
                         )
                     })}

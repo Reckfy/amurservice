@@ -68,7 +68,7 @@ h2 {
 }
 
 .docs {
-    padding: 4vw;
+    padding: 0 4vw;
     padding-bottom: 0px;
     min-height: 90vh;
     flex-wrap: wrap-reverse;
@@ -79,13 +79,12 @@ h2 {
         position: relative;
         width: 500px;
         object-fit: cover;
-        margin-left: -60px;
+        margin-left: -4vw;
     }
     >div {
-        width: 430px;
+        max-width: 630px;
         margin-left: 4vw;
-        margin-right: 4vw;
-        margin-top: 50px;
+        margin-top: 80px;
         padding-bottom: 20px;
     }
     .titleDocs {
@@ -156,6 +155,9 @@ ul {
     .docs {
         img {
             display: none;
+        }
+        >div {
+            margin-right: 4vw;
         }
     }
 }

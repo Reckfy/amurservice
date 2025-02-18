@@ -1,8 +1,10 @@
 import React from "react"
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import './DetailNews.scss'
 
 function DetailNews({dataNews, reports}) {
+    const navigate = useNavigate();
+
     const params = useParams();
     const id = parseInt(params.newsId);
 
@@ -25,6 +27,7 @@ function DetailNews({dataNews, reports}) {
     return (
         
         <div className="detailNews">
+            <button className="backButton" onClick={() => navigate('/news')}><img alt="" src='../img/left.png' /></button>
             <div>
                 <p>{currentNews.date}</p>  
                 <b>{currentNews.title}</b>               
@@ -44,7 +47,6 @@ function DetailNews({dataNews, reports}) {
                     })
                 )}  
             </div>
-            
         </div>
     );
 }

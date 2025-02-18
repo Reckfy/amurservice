@@ -40,6 +40,13 @@ function App() {
         fetchData();
     }, []);
 
+    const scrollTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
     return (
         <div>
             <Header />
@@ -53,6 +60,7 @@ function App() {
                     <Route path="/houses/:housesId" element={<DetailHouses tableHouses = {tableHouses} contracts = {contracts} protocols = {protocols} documents = {documents}/>} />
                 </Routes>
             </div>
+            <button className='buttonUp' onClick={() => scrollTop()}><img alt='' src={`${process.env.PUBLIC_URL}/img/up.png`}/></button>
         </div>
     );
 }
