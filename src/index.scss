@@ -23,6 +23,7 @@ button {
 
 .backButton{
   position: relative;
+  z-index: -1;
   left: -47vw;
   top: 35px;
 }
