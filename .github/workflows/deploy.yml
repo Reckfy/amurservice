@@ -28,6 +28,6 @@ jobs:
       run: |
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key && chmod 600 private_key
         rsync -avz -e "ssh -i private_key -o StrictHostKeyChecking=no" build/ deployer@193.200.74.213:/var/www/html
-        ssh -i private_key deployer@193.200.74.213 "sudo systemctl restart nginx"
+        echo "${{ secrets.DEPLOYER_PASSWD }}" | ssh -i private_key deployer@193.200.74.213 "sudo -S systemctl restart nginx"
         rm -f private_key
     
