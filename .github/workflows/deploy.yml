@@ -1,0 +1,33 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - release
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cloning rep
+      uses: actions/checkout@v3
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: npm i
+      run: npm install
+
+    - name: building
+      run: npm run build
+
+    - name: deploy
+      run: |
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key && chmod 600 private_key
+        rsync -avz -e "ssh -i private_key -o StrictHostKeyChecking=no" build/ deployer@193.200.74.213:/var/www/html
+        ssh -i private_key deployer@your_server_ip "sudo systemctl restart nginx"
+        rm -f private_key
+    
