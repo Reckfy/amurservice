@@ -35,7 +35,7 @@ function Contacts(){
                         <p>Понасийская Ирина Константиновна</p>
                     </div>
                     <div>
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A07ac5c396474ab1de776e60f81ba40ba949c3654b6553edc36946859f19f6a0e&amp;source=constructor" frameborder="0"></iframe>
+                        <iframe title='map' src="https://yandex.ru/map-widget/v1/?um=constructor%3A07ac5c396474ab1de776e60f81ba40ba949c3654b6553edc36946859f19f6a0e&amp;source=constructor" frameborder="0"></iframe>
                     </div>
                 </div>
                 <div className='worktime' style={{ display: activeTab === 'worktime' ? 'flex' : 'none' }}>

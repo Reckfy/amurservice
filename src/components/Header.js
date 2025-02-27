@@ -10,7 +10,7 @@ function Header() {
     return(
         <div className='header'>
             <div className='mobileMenu' style={{display: activeMenu === 'menu' ? 'block' : 'none'}}>
-                <button className='mobileMenuClose' onClick={() => setActiveMenu()}><img src={`${process.env.PUBLIC_URL}/img/cross.png`}/></button>
+                <button className='mobileMenuClose' onClick={() => setActiveMenu()}><img alt='' src={`${process.env.PUBLIC_URL}/img/cross.png`}/></button>
                 <Link to="/" className='menuLink' onClick={() => setActiveMenu()}>Компания</Link>
                 <Link to="/houses" className='menuLink' onClick={() => setActiveMenu()}>Дома</Link>
                 <Link to="/news" className='menuLink' onClick={() => setActiveMenu()}>Новости</Link>
@@ -26,7 +26,7 @@ function Header() {
                     </div>
                 </div>
                 <a className='number' href="tel:8-988-764-83-51">+7 (988) 764-83-51</a>
-                <button className='mobileMenuButton' onClick={() => setActiveMenu('menu')}><img src={`${process.env.PUBLIC_URL}/img/menu.png`}/></button>
+                <button className='mobileMenuButton' onClick={() => setActiveMenu('menu')}><img alt='' src={`${process.env.PUBLIC_URL}/img/menu.png`}/></button>
             </div>
             <div className={`menu`}>
                 <Link to="/" className='menuLink'>Компания</Link>
