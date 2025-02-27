@@ -92,9 +92,9 @@ function Contacts(){
                     <p>Email: <a href="mailto:">uk-amurservis@mail.ru</a></p>
                     
                 </div>
-                <div className='social' style={{ display: activeTab === 'social' ? 'block' : 'none' }}>На данный момент информация отсутствует</div>
-
-                
+                <div className='social' style={{ display: activeTab === 'social' ? 'block' : 'none' }}>
+                    На данный момент информация отсутствует
+                </div>
                 <div style={{display: 'none'}}>
                     <div>
                         <p>Способы передачи показаний приборов учета с 20 по 25 число:</p>
