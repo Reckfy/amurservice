@@ -86,7 +86,7 @@ function Contacts(){
                 </div>
                 <div className='indicators' style={{ display: activeTab === 'indicators' ? 'block' : 'none' }}>
                     <b>Способы передачи показаний приборов учета с 20 по 24 число:</b>
-                    <p>WhatsApp<img alt = '' src='./img/whatsapp.png'></img>: <a href="https://wa.me/89887648351">8-988-764-83-51</a></p>
+                    <p>WhatsApp<img alt = '' src='./img/whatsapp.png'></img>: <a href="https://wa.me/79887648351">8-988-764-83-51</a></p>
                     <p>Контактный телефон: <a href="tel:8-988-764-83-51">8-988-764-83-51</a></p>
                     
                     <p>Email: <a href="mailto:">uk-amurservis@mail.ru</a></p>
@@ -99,7 +99,7 @@ function Contacts(){
                     <div>
                         <p>Способы передачи показаний приборов учета с 20 по 25 число:</p>
                         <p>WhatsApp:</p>
-                        <a href="tel:8-988-764-83-51">8-988-764-83-51</a>
+                        <a href="https://wa.me/79887648351">8-988-764-83-51</a>
                         <p>Контактный телефон:</p>
                         <a href="tel:8-988-764-83-51">8-988-764-83-51</a>
                         <p>Email:</p>
