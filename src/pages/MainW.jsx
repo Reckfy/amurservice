@@ -40,8 +40,8 @@ function Main(){
                             <h2>свидетельства</h2>
                         </div> 
                         <ul>
-                            <li><a href='/' target="_blank" rel="noopener noreferrer">Лицензия на осуществление предпринимательской деятельности по управлению МКД по Ставропольскому краю</a></li>
-                            <li><a href='/' target="_blank" rel="noopener noreferrer">Свидетельство о внесении в Единый реестр управления многоквартирными домами</a></li>
+                            <li><a href='https://drive.google.com/file/d/1x65EE5uantUB06WNW6ytKHF_l0V3sVqb/view?usp=sharing' target="_blank" rel="noopener noreferrer">Приказ о предоставлении лицензии на осуществление предпринимательской деятельности по управлению МКД</a></li>
+                            <li><a href='https://drive.google.com/file/d/1GIR7R7y1S3f6IUGpMH8plPcvujlNOT4j/view?usp=sharing' target="_blank" rel="noopener noreferrer">Выписка из реестра лицензий</a></li>
                             <li><a href='https://drive.google.com/file/d/1SWkd3kRKAAPIKZcQ0ZcqejFAEKC_sWvR/view?usp=drive_link' target="_blank" rel="noopener noreferrer">Свидетельство ИНН от 26.08.2024</a></li>
                             <li><a href='https://drive.google.com/file/d/18gZhrdlelmZnBbYT7NzNFW5fthkJR2h4/view?usp=drive_link' target="_blank" rel="noopener noreferrer">Свидетельство ОГРН от 26.08.2024</a></li>
                         </ul>

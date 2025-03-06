@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Botter from './components/Botter'
 import { Routes, Route } from 'react-router-dom'
 import Main from './pages/MainW'
 import News from './pages/News'
@@ -61,6 +62,7 @@ function App() {
                 </Routes>
             </div>
             <button className='buttonUp' onClick={() => scrollTop()}><img alt='' src={`${process.env.PUBLIC_URL}/img/up.png`}/></button>
+            <Botter />
         </div>
     );
 }
